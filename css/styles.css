@@ -1,0 +1,365 @@
+/**,
+*::before,
+*::after {                     // not needed because of the modern-normalizer
+    box-sizing: border-box;
+}*/
+
+/*=============== global style reset =================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/*====================================================*/
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    /*max-width: 100%; */
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #434455;
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    margin: 0;
+    height: 72px;
+    background-color: #fff;
+    padding: 24px 0;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+}
+
+nav ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* Стилі для лого */
+.logo {
+    color: #4D5AE5;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    /*21px 116.667% */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+/* Стилі для частини "Studio" */
+.logo .studio {
+    color: #2E2F42;
+}
+
+.logo:focus {
+    color: #404bbf;
+}
+
+.nav-link {
+    color: var(--NAVY-BLUE, #2E2F42);
+    /* Body Medium */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    /*24px 150% */
+    letter-spacing: 0.02em;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #404BBF;
+}
+
+address {
+    font-style: normal;
+}
+
+.address ul {
+    display: flex;
+    gap: 20px;
+}
+
+.address .link {
+    /* Body */
+    color: var(--SLATE, #434455);
+    line-height: 1.5;
+    /*24px 150% */
+    letter-spacing: 0.32px;
+}
+
+.address .link:hover,
+.address .link:focus {
+    color: #404BBF;
+}
+
+.title {
+    background-color: #2e2f42;
+}
+
+.title-header {
+    color: var(--WHITE, #FFF);
+    text-align: center;
+    /* Header 1 */
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    /* 60px 107.143% */
+    letter-spacing: 0.02em;
+}
+
+.title .title-button {
+    color: var(--WHITE, #FFF);
+    /* Button Text */
+    font-weight: 500;
+    line-height: 1.5;
+    /* 24px 150% */
+    letter-spacing: 0.04em;
+    background-color: #4D5AE5;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.title .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    padding: 188px 0;
+}
+
+.title .title-button:hover,
+.title .title-button:focus,
+.title .title-button:active {
+    background-color: #404BBF;
+    cursor: pointer;
+}
+
+.advantages .container ul {
+    display: flex;
+    gap: 30px;
+    padding: 120px 0;
+}
+
+.advantages-title {
+    color: var(--NAVY-BLUE, #2E2F42);
+    /* Header 3 */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    /* 24px 120% */
+    letter-spacing: 0.02em;
+}
+
+.advantages-p {
+    /* Body */
+    color: #434455;
+    font-size: 16px;
+    line-height: 1.5;
+    /* 24px 150% */
+    letter-spacing: 0.02em;
+}
+
+.team {
+    background-color: #F4F4FD;
+}
+
+.team .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.team .container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.team .team-title {
+    color: var(--NAVY-BLUE, #2E2F42);
+    text-align: center;
+    /* Header 2 */
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    /* 40px 111.111% */
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+
+    padding-bottom: 60px;
+}
+
+.team .container .team-list {
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    width: calc((100% - 40px)/4);
+}
+
+.team .team-list-title {
+    color: var(--NAVY-BLUE, #2E2F42);
+    text-align: center;
+    /* Header 3 */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    /* 24px 120% */
+    letter-spacing: 0.4px;
+}
+
+.team .team-list-p {
+    text-align: center;
+    /* Body */
+    line-height: 1.5;
+    /* 24px 150% */
+    letter-spacing: 0.32px;
+    font-size: 16px;
+}
+
+
+.portfolio .container ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.portfolio .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.portfolio .portfolio-title {
+    color: var(--NAVY-BLUE, #2E2F42);
+    text-align: center;
+    /* Header 2 */
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    /* 40px 111.111% */
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+
+    padding-bottom: 60px;
+}
+
+.portfolio .portfolio-list {
+    background-color: #FFFFFF;
+    width: calc((100% - 20px)/3);
+}
+
+.portfolio-list-card {
+    border: 1px solid #E7E9FC;
+    border-top: none;
+    padding: 32px 16px;
+    text-align: left;
+}
+
+.portfolio .portfolio-list-title {
+    color: var(--NAVY-BLUE, #2E2F42);
+    /* Header 3 */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    /* 24px 120% */
+    letter-spacing: 0.4px;
+    padding: 16px 16px 5px 16px;
+}
+
+.portfolio .portfolio-list-p {
+    /* Body */
+    line-height: 1.5;
+    /* 24px 150% */
+    letter-spacing: 0.32px;
+    padding: 5px 16px 16px 16px;
+}
+
+.footer {
+    background-color: #2e2f42;
+    padding: 100px 0;
+}
+
+.footer .footer-p {
+    color: var(--CLOUD, #F4F4FD);
+    /* Body */
+    line-height: 1.5;
+    /* 24px 150% */
+    letter-spacing: 0.32px;
+    max-width: 264px;
+}
+
+/* Стилі для лого */
+.footer-web-studio {
+    display: inline-block;
+    color: #4d5ae5;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    /*21px 116.667% */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+/* Стилі для частини "Studio" */
+.footer-web-studio .studio {
+    color: #f4f4fd;
+}
+
+.footer-web-studio:focus {
+    color: #404bbf;
+}
