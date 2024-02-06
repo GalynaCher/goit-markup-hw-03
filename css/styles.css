@@ -214,7 +214,7 @@ address {
     overflow: hidden;
 }
 
-.advantages .container ul {
+.advantages-ul {
     display: flex;
     gap: 24px;
 }
