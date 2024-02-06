@@ -70,11 +70,13 @@ header {
     height: 72px;
     background-color: #fff;
     padding: 24px 0;
+    border-bottom: 1px solid #e7e9fc
 }
 
 nav {
     display: flex;
     gap: 50px;
+    align-items: center;
 }
 
 nav ul {
@@ -95,6 +97,7 @@ nav ul {
     /*21px 116.667% */
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-right: 76px
 }
 
 /* Стилі для частини "Studio" */
@@ -107,13 +110,14 @@ nav ul {
 }
 
 .nav-link {
-    color: var(--NAVY-BLUE, #2E2F42);
+    color: #2E2F42;
     /* Body Medium */
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     /*24px 150% */
     letter-spacing: 0.02em;
+    padding: 24px 0;
 }
 
 .nav-link:hover,
@@ -127,7 +131,7 @@ address {
 
 .address ul {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 .address .link {
@@ -145,17 +149,19 @@ address {
 
 .title {
     background-color: #2e2f42;
+    padding: 188px 0;
 }
 
 .title-header {
-    color: var(--WHITE, #FFF);
-    text-align: center;
+    color: #FFF;
     /* Header 1 */
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
     /* 60px 107.143% */
     letter-spacing: 0.02em;
+    max-width: 496px;
+    text-align: center;
 }
 
 .title .title-button {
@@ -171,14 +177,17 @@ address {
     border-radius: 4px;
     padding: 16px 32px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    min-width: 169px;
+    height: 56px;
+    border: none;
 }
 
 .title .container {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    justify-content: center;
-    padding: 188px 0;
+    /*justify-content: center;*/
+    align-items: center;
 }
 
 .title .title-button:hover,
@@ -188,20 +197,41 @@ address {
     cursor: pointer;
 }
 
-.advantages .container ul {
-    display: flex;
-    gap: 30px;
+.advantages {
     padding: 120px 0;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.advantages .container ul {
+    display: flex;
+    gap: 24px;
+}
+
+.advantages-li {
+    width: calc((100% - 72px) / 4);
+}
+
 .advantages-title {
-    color: var(--NAVY-BLUE, #2E2F42);
+    color: #2E2F42;
     /* Header 3 */
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     /* 24px 120% */
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .advantages-p {
@@ -215,17 +245,7 @@ address {
 
 .team {
     background-color: #F4F4FD;
-}
-
-.team .container {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.team .container ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 120px 0;
 }
 
 .team .team-title {
@@ -238,19 +258,29 @@ address {
     /* 40px 111.111% */
     letter-spacing: 0.72px;
     text-transform: capitalize;
-
-    padding-bottom: 60px;
+    margin-bottom: 72px;
 }
 
-.team .container .team-list {
+.team .container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.team-list {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    width: calc((100% - 40px)/4);
+    width: calc((100% - 72px) / 4);
 }
 
-.team .team-list-title {
-    color: var(--NAVY-BLUE, #2E2F42);
+.team-list-namepos {
+    padding: 32px 0;
+}
+
+.team-list-title {
+    color: #2E2F42;
     text-align: center;
     /* Header 3 */
     font-size: 20px;
@@ -258,9 +288,10 @@ address {
     line-height: 1.2;
     /* 24px 120% */
     letter-spacing: 0.4px;
+    margin-bottom: 8px;
 }
 
-.team .team-list-p {
+.team-list-p {
     text-align: center;
     /* Body */
     line-height: 1.5;
@@ -269,21 +300,12 @@ address {
     font-size: 16px;
 }
 
-
-.portfolio .container ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-}
-
-.portfolio .container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+.portfolio {
+    padding: 120px 0 120px 0;
 }
 
 .portfolio .portfolio-title {
-    color: var(--NAVY-BLUE, #2E2F42);
+    color: #2E2F42;
     text-align: center;
     /* Header 2 */
     font-size: 36px;
@@ -292,13 +314,22 @@ address {
     /* 40px 111.111% */
     letter-spacing: 0.72px;
     text-transform: capitalize;
-
-    padding-bottom: 60px;
+    margin-bottom: 72px;
 }
 
-.portfolio .portfolio-list {
+.portfolio-ul {
+    display: flex;
+    flex-wrap: wrap;
+    /*gap: 10px;*/
+    justify-content: space-between;
+
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-list {
     background-color: #FFFFFF;
-    width: calc((100% - 20px)/3);
+    width: calc((100% - 48px) / 3);
 }
 
 .portfolio-list-card {
@@ -308,23 +339,22 @@ address {
     text-align: left;
 }
 
-.portfolio .portfolio-list-title {
-    color: var(--NAVY-BLUE, #2E2F42);
+.portfolio-list-title {
+    color: #2E2F42;
     /* Header 3 */
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     /* 24px 120% */
     letter-spacing: 0.4px;
-    padding: 16px 16px 5px 16px;
+    margin-bottom: 8px;
 }
 
-.portfolio .portfolio-list-p {
+.portfolio-list-p {
     /* Body */
     line-height: 1.5;
     /* 24px 150% */
     letter-spacing: 0.32px;
-    padding: 5px 16px 16px 16px;
 }
 
 .footer {
@@ -333,7 +363,7 @@ address {
 }
 
 .footer .footer-p {
-    color: var(--CLOUD, #F4F4FD);
+    color: #F4F4FD;
     /* Body */
     line-height: 1.5;
     /* 24px 150% */
