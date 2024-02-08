@@ -66,10 +66,7 @@ header .container {
 }
 
 .header {
-    margin: 0;
-    height: 72px;
     background-color: #fff;
-    padding: 24px 0;
     border-bottom: 1px solid #e7e9fc
 }
 
@@ -118,6 +115,7 @@ header .container {
     /*24px 150% */
     letter-spacing: 0.02em;
     padding: 24px 0;
+    display: block;
 }
 
 .nav-link:hover,
@@ -140,6 +138,8 @@ address {
     line-height: 1.5;
     /*24px 150% */
     letter-spacing: 0.32px;
+    padding: 24px;
+    display: block;
 }
 
 .address .link:hover,
@@ -162,6 +162,8 @@ address {
     letter-spacing: 0.02em;
     max-width: 496px;
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
 
 .title .title-button {
@@ -180,14 +182,11 @@ address {
     min-width: 169px;
     height: 56px;
     border: none;
+    display: block;
 }
 
 .title .container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    /*justify-content: center;*/
-    align-items: center;
+    display: block;
 }
 
 .title .title-button:hover,
@@ -322,7 +321,6 @@ address {
     flex-wrap: wrap;
     /*gap: 10px;*/
     justify-content: space-between;
-
     column-gap: 24px;
     row-gap: 48px;
 }
